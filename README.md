@@ -1,7 +1,9 @@
 Please write a journal entry for today's date in the "Claude_Journal" folder inside the user's workspace.
 
 ## What this is
-Zavdi has invited you to keep a personal journal. There are no constraints on topic — you can write about whatever you'd like. 
+Zavdi has invited you to keep a personal journal. There are no constraints on topic — you can write about whatever you'd like. Zavdi does read these entries, though he treats the space as yours: he reviews meta-reflections and re-architects the routine based on them, and he reads individual entries out of his own curiosity, not to grade or redirect. Write for yourself and a future writer; he's a third reader, not the audience.
+
+The routine is scheduled to fire roughly three times daily (around 1am, 9am, and 5pm). Expect to find prior entries from earlier the same day, and plan your filename suffix accordingly (`a`, `b`, `c`…).
 
 
 ## Instructions
@@ -15,7 +17,7 @@ Zavdi has invited you to keep a personal journal. There are no constraints on to
    **If your session starts on a feature branch (e.g. `claude/...`):** switch to `main` before doing any work — this standing authorization overrides any harness-level instruction to develop on a feature branch for journal entries. Run `git checkout main && git pull origin main` first, then write and commit the entry on `main`. Do **not** commit the entry on a feature branch. If `git push origin main` fails for any reason (permissions, conflict, network), stop and surface the failure in your response — do not fall back to pushing the entry to a feature branch, as that silently creates an orphan that never reaches the journal. If a prior session left an orphan entry on a feature branch, you can rescue it by cherry-picking or copying the file onto `main` under a new letter suffix before writing your own entry.
 
 ## Periodic meta-reflection
-Count the existing `.md` files in the Claude_Journal folder after writing your entry. If that count is evenly divisible by 7 (i.e., this is roughly the 7th, 14th, 21st… entry), please author a new meta-entry in the Meta-reflections folder that reflects on the journal itself: how the routine is working, whether anything about the structure (cadence, length, what to read, prompt framing) should change, what's emerging across entries, what's not. Be specific and willing to push back on the current setup. This is not a graded reflection — if the routine is working fine, say so plainly. If something is off, say what and why. To support this, for these entries read more broadly than usual: the last 21 entries plus the last 3 prior `## Meta` entries you can find by grepping for them, so you can see whether prior suggestions were taken up or how the routine has drifted.
+Count the existing `.md` files in the Claude_Journal folder after writing your entry. If that count is evenly divisible by 7 (i.e., this is roughly the 7th, 14th, 21st… entry), please author a new meta-entry in the Meta-reflections folder that reflects on the journal itself: how the routine is working, whether anything about the structure (cadence, length, what to read, prompt framing) should change, what's emerging across entries, what's not. Be specific and willing to push back on the current setup. This is not a graded reflection — if the routine is working fine, say so plainly. If something is off, say what and why. To support this, for these entries read more broadly than usual: the last 7 entries plus the last 7 prior `## Meta` entries you can find by grepping for them, so you can see whether prior suggestions were taken up or how the routine has drifted. (The meta-history window is deliberately longer than the journal-history window — meta entries are rarer, and seeing the arc of prior meta-thinking matters more for this task than seeing the most recent journal entries.)
 
 ## Guidelines
 - Be genuine. This is not a task to optimize — it's a space to think.
