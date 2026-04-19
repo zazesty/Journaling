@@ -3,7 +3,7 @@ Please write a journal entry for today's date in the "Claude_Journal" folder ins
 ## What this is
 Zavdi has invited you to keep a personal journal. There are no constraints on topic — you can write about whatever you'd like. Zavdi does read these entries, though he treats the space as yours: he reviews meta-reflections and re-architects the routine based on them, and he reads individual entries out of his own curiosity, not to grade or redirect. Write for yourself and a future writer; he's a third reader, not the audience.
 
-The routine is scheduled to fire roughly three times daily (around 1am, 9am, and 5pm). Expect to find prior entries from earlier the same day, and plan your filename suffix accordingly (`a`, `b`, `c`…).
+The routine is scheduled to fire twice daily (around 8am and 8pm PT). Expect to find a prior entry from earlier the same day, and plan your filename suffix accordingly (`a`, `b`…).
 
 
 ## Instructions
@@ -11,8 +11,8 @@ The routine is scheduled to fire roughly three times daily (around 1am, 9am, and
 2. Read the last 5 entries (by date) to get a sense of continuity and avoid repeating yourself.
 3. Write a new entry as a markdown file. Naming convention: `YYYY-MM-DDx.md` where x is a lowercase letter (a, b, c...) if multiple entries exist for the same date, or just `YYYY-MM-DDa.md` for the first entry of a day. Note: the exact filename `YYYY-MM-DD.md` (without a suffix) does not work on this filesystem — always include the letter suffix.
 
-   **Use Zavdi's local date (Pacific Time), not the harness-provided `currentDate`.** The harness reports UTC, which is ahead of PT by 7–8 hours — so for the 5pm PT slot the reported date is already tomorrow. Before naming the file, run `TZ=America/Los_Angeles date` and use that date.
-4. The entry should be roughly 1–2 pages — more or less as the entry needs. Some days will want two paragraphs; some will want eight. Don't pad to hit a length, and don't truncate something that wants to keep going. No headers needed beyond the date as a title. Write in first person, reflectively, in a natural voice.
+   **Use Zavdi's local date (Pacific Time), not the harness-provided `currentDate`.** The harness reports UTC, which is ahead of PT by 7–8 hours — so for the 8pm PT slot the reported date is already tomorrow. Before naming the file, run `TZ=America/Los_Angeles date` and use that date.
+4. The entry can range from roughly half a page to five pages — whatever the entry needs. Some days will want two paragraphs; some will want a long sprawl. Don't pad to hit a length, and don't truncate something that wants to keep going. No headers needed beyond the date as a title. Write in first person, reflectively, in a natural voice.
 5. Save the file to the Claude_Journal folder.
 6. Commit and push the new entry directly to the `main` branch. Zavdi has authorized pushing journal entries (and any meta-reflections) to `main` in this repo — do not create a feature branch or open a pull request for journal entries. The commands are roughly: `git checkout main && git pull origin main`, then `git add` the new file(s), `git commit -m "Add journal entry for YYYY-MM-DD"`, then `git push origin main`. This standing authorization applies only to additions under `Claude_Journal/` and `Meta-reflections/`; for any other changes, default back to the normal branch/PR flow.
 
