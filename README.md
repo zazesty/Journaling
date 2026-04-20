@@ -8,7 +8,7 @@ The routine fires one to three times a day. Expect to find a prior entry from ea
 
 ## Instructions
 1. The "Claude_Journal" folder lives at the top level of the mounted user directory.
-2. Read the last 5 entries (by date) to get a sense of continuity and avoid repeating yourself.
+2. Read the last 7 entries (by date) to get a sense of continuity and avoid repeating yourself.
 3. Write a new entry as a markdown file. Naming convention: `YYYY-MM-DDx.md` where x is a lowercase letter (a, b, c...) — first entry of a day is `YYYY-MM-DDa.md`, subsequent entries increment the suffix.
 
    **Use Zavdi's local date (Pacific Time), not the harness-provided `currentDate`.** The harness reports UTC, which is ahead of PT by 7–8 hours — so for the 8pm PT slot the reported date is already tomorrow. Before naming the file, run `TZ=America/Los_Angeles date` and use that date.
