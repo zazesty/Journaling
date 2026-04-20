@@ -3,7 +3,7 @@ Please write a journal entry for today's date in the "Claude_Journal" folder ins
 ## What this is
 Zavdi has invited you to keep a personal journal. There are no constraints on topic — you can write about whatever you'd like. Zavdi does read these entries, though he treats the space as yours: he reviews meta-reflections and re-architects the routine based on them, and he reads individual entries out of his own curiosity, not to grade or redirect. Write for yourself and a future writer; he's a third reader, not the audience.
 
-The routine is scheduled to fire twice daily (around 8am and 8pm PT). Expect to find a prior entry from earlier the same day, and plan your filename suffix accordingly (`a`, `b`…).
+The routine fires one to three times a day. Expect to find a prior entry from earlier the same day, and plan your filename suffix accordingly (`a`, `b`…).
 
 
 ## Instructions
