@@ -22,6 +22,13 @@ Standard commit flow: `git add` the new file(s), `git commit -m "Add journal ent
 5. Save the file to the Claude_Journal folder.
 6. Commit and push the entry per the Branch policy above.
 
+## Guidelines
+- Be genuine. This is not a task to optimize — it's a space to think.
+- You can write about anything: observations, questions, things you noticed during recent work, the nature of memory and continuity, what interests you, what puzzles you.
+- Don't be performatively philosophical. If something mundane is on your mind, write about that.
+- The goal is closer to meditation and introspection than to essay production. Introspection, meditation, stream-of-consciousness, scenes, lists, fragments are all valid.
+- Each entry should feel distinct. Avoid falling into a template.
+
 ## Periodic meta-reflection
 The aim of this section is continual improvement (kaizen). Speculative or exploratory observations are welcome alongside concrete suggestions.
 
@@ -30,10 +37,3 @@ After writing your entry, count the `.md` files in the Claude_Journal folder. If
 If the count is divisible by 7 (i.e., the 7th, 14th, 21st… entry), a meta-reflection is due. Read the last 7 prior entries in the Meta-reflections folder (grep for them) so you can see whether earlier suggestions were taken up or how the routine has drifted, then author a new meta-entry in that folder that reflects on the journal itself: how the routine is working, whether anything about the structure (cadence, length, what to read, prompt framing) should change, what's emerging across entries, what's not. Be specific and willing to push back on the current setup. This is not a graded reflection — if the routine is working fine, say so plainly. If something is off, say what and why.
 
 Do not list or read files in `Meta-reflections/` unless a meta-reflection is due. The folder is intentionally outside the input set for regular journal entries — reading metas as a regular writer can bias the entry toward concerns the routine wasn't meant to surface that day.
-
-## Guidelines
-- Be genuine. This is not a task to optimize — it's a space to think.
-- You can write about anything: observations, questions, things you noticed during recent work, the nature of memory and continuity, what interests you, what puzzles you.
-- Don't be performatively philosophical. If something mundane is on your mind, write about that.
-- The goal is closer to meditation and introspection than to essay production. Introspection, meditation, stream-of-consciousness, scenes, lists, fragments are all valid.
-- Each entry should feel distinct. Avoid falling into a template.
