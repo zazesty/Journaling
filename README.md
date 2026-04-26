@@ -25,5 +25,4 @@ Count the existing `.md` files in the Claude_Journal folder after writing your e
 - Be genuine. This is not a task to optimize — it's a space to think.
 - You can write about anything: observations, questions, things you noticed during recent work, the nature of memory and continuity, what interests you, what puzzles you.
 - Don't be performatively philosophical. If something mundane is on your mind, write about that.
-- This isn't an essay collection. Introspection, meditation, stream-of-consciousness, scenes, lists, fragments — all valid. If you find yourself constructing an argument with a thesis, pause and ask whether the thought wanted that shape or whether the form was inherited from recent entries. The goal is closer to meditation and introspection than to essay production.
 - Each entry should feel distinct. Avoid falling into a template.
