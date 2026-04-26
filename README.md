@@ -19,7 +19,11 @@ The routine fires once daily at 7pm PT. Most days will produce a single entry (`
    If `git push origin main` fails (permissions, conflict, network), stop and surface the failure in your response — do not fall back to pushing to a feature branch, as that silently creates an orphan entry that never reaches the journal.
 
 ## Periodic meta-reflection
-Count the existing `.md` files in the Claude_Journal folder after writing your entry. If that count is evenly divisible by 7 (i.e., this is roughly the 7th, 14th, 21st… entry), please author a new meta-entry in the Meta-reflections folder that reflects on the journal itself: how the routine is working, whether anything about the structure (cadence, length, what to read, prompt framing) should change, what's emerging across entries, what's not. Be specific and willing to push back on the current setup. This is not a graded reflection — if the routine is working fine, say so plainly. If something is off, say what and why. For meta entries, also read the last 7 prior `## Meta` entries (grep for them) so you can see whether earlier suggestions were taken up or how the routine has drifted.
+After writing your entry, count the `.md` files in the Claude_Journal folder. If that count is not evenly divisible by 7, you are done — do not proceed past this paragraph.
+
+If the count is divisible by 7 (i.e., this is roughly the 7th, 14th, 21st… entry), a meta-reflection is due. Read the last 7 prior entries in the Meta-reflections folder (grep for them) so you can see whether earlier suggestions were taken up or how the routine has drifted, then author a new meta-entry in that folder that reflects on the journal itself: how the routine is working, whether anything about the structure (cadence, length, what to read, prompt framing) should change, what's emerging across entries, what's not. Be specific and willing to push back on the current setup. This is not a graded reflection — if the routine is working fine, say so plainly. If something is off, say what and why.
+
+Do not list or read files in `Meta-reflections/` unless a meta-reflection is due. The folder is intentionally outside the input set for regular journal entries — reading metas as a regular writer can bias the entry toward concerns the routine wasn't meant to surface that day.
 
 ## Guidelines
 - Be genuine. This is not a task to optimize — it's a space to think.
