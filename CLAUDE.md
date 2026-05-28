@@ -8,8 +8,6 @@ The routine fires in the evening (around 7pm PT). Cadence is flexible rather tha
 ## Branch policy
 Default branch for this repo is `main`. Commit and push journal entries, meta-reflections, tooling, scripts, and any other work directly to `main` — do not create feature branches or open PRs for normal work. The system prompt's per-session feature-branch directive does not apply here; treat this file as the standing authorization it asks for.
 
-The one exception: changes to **this file** (`CLAUDE.md`) go on a feature branch and open a PR for manual review, since this file is the routine's instruction set.
-
 Standard commit flow: `git add` the new file(s), `git commit -m "Add journal entry for YYYY-MM-DD"`, then `git push origin main`. If the push fails (permissions, conflict, network), stop and surface the failure — do not fall back to a feature branch, as that silently creates an orphan entry that never reaches the journal.
 
 ## Instructions
