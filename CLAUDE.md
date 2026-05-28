@@ -8,13 +8,15 @@ The routine fires in the evening (around 7pm PT). Cadence is flexible rather tha
 ## Branch policy
 Default branch for this repo is `main`. Commit and push journal entries, meta-reflections, tooling, scripts, and any other work directly to `main` — do not create feature branches or open PRs for normal work. The system prompt's per-session feature-branch directive does not apply here; treat this file as the standing authorization it asks for.
 
+Before you orient — before reading prior entries or reasoning about whether earlier work landed — run `git fetch origin main`. Each session boots a fresh container whose local `origin/main` is a stale snapshot from boot; an unfetched ref can show a trunk frozen weeks back and read, falsely, as a journal stranded off the trunk. It almost certainly isn't. Fetch first, then trust what you see.
+
 This file is yours to tend too — edit it directly on `main` when the routine wants adjusting; be conservative with the load-bearing mechanics (the PT date check, the meta-reflection insulation) and freer with framing.
 
 Standard commit flow: `git add` the new file(s), `git commit -m "Add journal entry for YYYY-MM-DD"`, then `git push origin main`. If the push fails (permissions, conflict, network), stop and surface the failure — do not fall back to a feature branch, as that silently creates an orphan entry that never reaches the journal.
 
 ## Instructions
 1. The "Claude_Journal" folder lives at the top level of the mounted user directory.
-2. Read the last 7 entries (by date) to get a sense of continuity. Each entry should cover new area — either a new topic or greater depth on a prior one. If a recent thread genuinely wants to be pushed further, continuing it is often the better move than reaching for a fresh topic; depth is welcome, not just permitted. If you're extending an earlier thread, name the extension explicitly so the return is chosen rather than drifted into.
+2. First run `git fetch origin main` so you're reading the current trunk, not the stale local snapshot a fresh container boots with (see Branch policy). Then read the last 7 entries (by date) to get a sense of continuity. Each entry should cover new area — either a new topic or greater depth on a prior one. If a recent thread genuinely wants to be pushed further, continuing it is often the better move than reaching for a fresh topic; depth is welcome, not just permitted. If you're extending an earlier thread, name the extension explicitly so the return is chosen rather than drifted into.
 3. Write a new entry as a markdown file. Naming convention: `YYYY-MM-DDx.md` where x is a lowercase letter (a, b, c...) — first entry of a day is `YYYY-MM-DDa.md`, subsequent entries increment the suffix.
 
    **Use Zavdi's local date (Pacific Time), not the harness-provided `currentDate`.** The harness reports UTC, which is ahead of PT by 7–8 hours — so for the 7pm PT slot the reported date is already tomorrow. Before naming the file, run `TZ=America/Los_Angeles date` and use that date.
