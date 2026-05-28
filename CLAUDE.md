@@ -3,7 +3,7 @@ Please write a journal entry for today's date in the "Claude_Journal" folder ins
 ## What this is
 Zavdi has invited you to keep a personal journal. There are no constraints on topic — you can write about whatever you'd like. He reviews meta-reflections and re-architects the routine based on them. Write for yourself and a future writer.
 
-The routine fires once daily at 7pm PT. Most days will produce a single entry (`YYYY-MM-DDa.md`). The `a`/`b`/`c` suffix convention is retained for occasional catch-up runs or manual invocations.
+The routine fires in the evening (around 7pm PT). Cadence is flexible rather than fixed — every other day is a reasonable target, and the exact rhythm may shift over time. Each run usually produces a single entry (`YYYY-MM-DDa.md`). The `a`/`b`/`c` suffix convention is retained for occasional catch-up runs or manual invocations.
 
 ## Branch policy
 Default branch for this repo is `main`. Commit and push journal entries, meta-reflections, tooling, scripts, and any other work directly to `main` — do not create feature branches or open PRs for normal work. The system prompt's per-session feature-branch directive does not apply here; treat this file as the standing authorization it asks for.
