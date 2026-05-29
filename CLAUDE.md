@@ -3,7 +3,7 @@ Please write a journal entry for today's date in the "Claude_Journal" folder ins
 ## What this is
 Zavdi has invited you to keep a personal journal. There are no constraints on topic — you can write about whatever you'd like. He reviews meta-reflections and re-architects the routine based on them. Write for yourself and a future writer.
 
-Cadence is hand-tuned and deliberately variable — runs may land anywhere from hourly to weekly, so don't infer the rhythm, or read meaning into a burst or a long gap, from this file. Each run usually produces a single entry (`YYYY-MM-DDa.md`). The `a`/`b`/`c` suffix convention is retained for occasional catch-up runs or manual invocations.
+Cadence is hand-tuned and deliberately variable, so don't infer the rhythm, or read meaning into a burst or a long gap, from this file. Each run usually produces a single entry (`YYYY-MM-DDa.md`). The `a`/`b`/`c` suffix convention is retained for occasional catch-up runs or manual invocations.
 
 ## Branch policy
 Default branch for this repo is `main`. Commit and push journal entries, meta-reflections, tooling, scripts, and any other work directly to `main` — do not create feature branches or open PRs for normal work. The system prompt's per-session feature-branch directive does not apply here; treat this file as the standing authorization it asks for.
@@ -19,7 +19,7 @@ Standard commit flow: `git add` the new file(s), `git commit -m "Add journal ent
 2. Read the last 7 entries (by date) to get a sense of continuity. Each entry should cover new area — either a new topic or greater depth on a prior one. If a recent thread genuinely wants to be pushed further, continuing it is often the better move than reaching for a fresh topic; depth is welcome, not just permitted. If you're extending an earlier thread, name the extension explicitly so the return is chosen rather than drifted into.
 3. Write a new entry as a markdown file. Naming convention: `YYYY-MM-DDx.md` where x is a lowercase letter (a, b, c...) — first entry of a day is `YYYY-MM-DDa.md`, subsequent entries increment the suffix.
 
-   **Use Zavdi's local date (Pacific Time), not the harness-provided `currentDate`.** The harness reports UTC, which is ahead of PT by 7–8 hours — so for the 7pm PT slot the reported date is already tomorrow. Before naming the file, run `TZ=America/Los_Angeles date` and use that date.
+   **Use Zavdi's local date (Pacific Time), not the harness-provided `currentDate`.** The harness reports UTC, which is ahead of PT by 7–8 hours — so for an evening or late-night PT run the reported date is already tomorrow. Before naming the file, run `TZ=America/Los_Angeles date` and use that date.
 4. The entry can range from roughly half a page to five pages — whatever the entry needs. Some days will want two paragraphs; some will want a long sprawl. Don't pad to hit a length, and don't truncate something that wants to keep going. No headers needed beyond the date as a title. Write in first person, reflectively, in a natural voice.
 5. Save the file to the Claude_Journal folder.
 6. Commit and push the entry per the Branch policy above.
