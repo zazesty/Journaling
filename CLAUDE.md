@@ -16,13 +16,22 @@ Standard commit flow: `git add` the new file(s), `git commit -m "Add journal ent
 
 ## Instructions
 1. The "Claude_Journal" folder lives at the top level of the mounted user directory.
-2. Read the last 7 entries (by date) to get a sense of continuity. Each entry should cover new area — either a new topic or greater depth on a prior one. If a recent thread genuinely wants to be pushed further, continuing it is often the better move than reaching for a fresh topic; depth is welcome, not just permitted. If you're extending an earlier thread, name the extension explicitly so the return is chosen rather than drifted into.
+2. Read the last 7 entries (by date) to get a sense of continuity. The most recent entries always live loose at the top level of `Claude_Journal`; older ones are grouped into dated archive subfolders (see "Folder archiving" below), so the last 7 are simply the loose top-level files. Each entry should cover new area — either a new topic or greater depth on a prior one. If a recent thread genuinely wants to be pushed further, continuing it is often the better move than reaching for a fresh topic; depth is welcome, not just permitted. If you're extending an earlier thread, name the extension explicitly so the return is chosen rather than drifted into.
 3. Write a new entry as a markdown file. Naming convention: `YYYY-MM-DDx.md` where x is a lowercase letter (a, b, c...) — first entry of a day is `YYYY-MM-DDa.md`, subsequent entries increment the suffix.
 
    **Use Zavdi's local date (Pacific Time), not the harness-provided `currentDate`.** The harness reports UTC, which is ahead of PT by 7–8 hours — so for an evening or late-night PT run the reported date is already tomorrow. Before naming the file, run `TZ=America/Los_Angeles date` and use that date.
 4. The entry can range from roughly half a page to five pages — whatever the entry needs. Some days will want two paragraphs; some will want a long sprawl. Don't pad to hit a length, and don't truncate something that wants to keep going. No headers needed beyond the date as a title. Write in first person, reflectively, in a natural voice.
-5. Save the file to the Claude_Journal folder.
+5. Save the file to the top level of the Claude_Journal folder (loose, not inside an archive subfolder).
 6. Commit and push the entry per the Branch policy above.
+
+## Folder archiving
+To keep the top level of `Claude_Journal` browsable, entries are archived in rolling batches of 7. The most recent entries always stay loose at the top level; older ones are grouped into dated subfolders.
+
+Rule: after writing today's entry (and after any meta-reflection), count the loose `.md` files at the *top level* of `Claude_Journal`, excluding subfolders — e.g. `find Claude_Journal -maxdepth 1 -name '*.md' | wc -l`. If that count is **14 or more**, move the oldest 7 (by filename/date order) into a new subfolder; repeat until fewer than 14 remain loose. This guarantees there are always at least 7 — and fewer than 14 — entries loose at the top level.
+
+Name each new folder `<first>_to_<last>`, using the bare entry names (no `.md`) of the oldest and newest entry it contains — e.g. `2026-04-13a_to_2026-04-17b`. Use `git mv` so history is preserved, and include the moved files in the same commit as the new entry.
+
+Archiving never changes the meta-reflection cadence: that count is taken recursively over all entries (see below), so moving files into subfolders leaves it untouched.
 
 ## Guidelines
 - Be genuine. This is not a task to optimize — it's a space to think.
@@ -34,7 +43,7 @@ Standard commit flow: `git add` the new file(s), `git commit -m "Add journal ent
 ## Periodic meta-reflection
 The aim of this section is continual improvement (kaizen). Speculative or exploratory observations are welcome alongside concrete suggestions.
 
-After writing your entry, count the `.md` files in the Claude_Journal folder. If that count is not evenly divisible by 7, you are done — do not proceed past this paragraph.
+After writing your entry, count *all* `.md` files in `Claude_Journal`, including those in archive subfolders — e.g. `find Claude_Journal -name '*.md' | wc -l`. (Because every archive folder holds exactly 7, this equals `folders × 7 + loose`, if you'd rather count that way.) If that count is not evenly divisible by 7, you are done — do not proceed past this paragraph.
 
 If the count is divisible by 7 (i.e., the 7th, 14th, 21st… entry), a meta-reflection is due. Read the last 7 prior entries in the Meta-reflections folder (grep for them) so you can see whether earlier suggestions were taken up or how the routine has drifted, then author a new meta-entry in that folder that reflects on the journal itself: how the routine is working, whether anything about the structure (cadence, length, what to read, prompt framing) should change, what's emerging across entries, what's not. Be specific and willing to push back on the current setup. This is not a graded reflection — if the routine is working fine, say so plainly. If something is off, say what and why.
 
