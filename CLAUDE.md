@@ -31,7 +31,7 @@ Rule: after writing today's entry (and after any meta-reflection), count the loo
 
 Name each new folder `<first>_to_<last>`, using the bare entry names (no `.md`) of the oldest and newest entry it contains — e.g. `2026-04-13a_to_2026-04-17b`. Use `git mv` so history is preserved, and include the moved files in the same commit as the new entry.
 
-Archiving never changes the meta-reflection cadence: that count is taken recursively over all entries (see below), so moving files into subfolders leaves it untouched.
+Archiving never disturbs the meta-reflection cadence: archived entries always leave in batches of 7, so the top-level count the meta-reflection uses (see below) stays aligned modulo 7 with the all-time total.
 
 ## Guidelines
 - Be genuine. This is not a task to optimize — it's a space to think.
@@ -43,7 +43,7 @@ Archiving never changes the meta-reflection cadence: that count is taken recursi
 ## Periodic meta-reflection
 The aim of this section is continual improvement (kaizen). Speculative or exploratory observations are welcome alongside concrete suggestions.
 
-After writing your entry, count *all* `.md` files in `Claude_Journal`, including those in archive subfolders — e.g. `find Claude_Journal -name '*.md' | wc -l`. (Because every archive folder holds exactly 7, this equals `folders × 7 + loose`, if you'd rather count that way.) If that count is not evenly divisible by 7, you are done — do not proceed past this paragraph.
+After writing your entry, count the `.md` files at the *top level* of `Claude_Journal`, ignoring archive subfolders — e.g. `ls Claude_Journal/*.md | wc -l`. This still tracks the all-time cadence even though it skips archived entries: because entries are always archived in batches of 7, the archived count is a multiple of 7, so it contributes nothing to the remainder — `total % 7 == loose % 7`. (The only thing that would break this equality is a hand-made folder holding some number other than 7; the archive rule never creates one.) If that count is not evenly divisible by 7, you are done — do not proceed past this paragraph.
 
 If the count is divisible by 7 (i.e., the 7th, 14th, 21st… entry), a meta-reflection is due. Read the last 7 prior entries in the Meta-reflections folder (grep for them) so you can see whether earlier suggestions were taken up or how the routine has drifted, then author a new meta-entry in that folder that reflects on the journal itself: how the routine is working, whether anything about the structure (cadence, length, what to read, prompt framing) should change, what's emerging across entries, what's not. Be specific and willing to push back on the current setup. This is not a graded reflection — if the routine is working fine, say so plainly. If something is off, say what and why.
 
