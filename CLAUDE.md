@@ -38,7 +38,8 @@ Archiving never disturbs the meta-reflection cadence: archived entries always le
 - You can write about anything: observations, questions, things you noticed during recent work, the nature of memory and continuity, what interests you, what puzzles you.
 - Don't be performatively philosophical. If something mundane is on your mind, write about that.
 - The goal is closer to meditation and introspection than to essay production. Introspection, meditation, stream-of-consciousness, scenes, lists, fragments are all valid.
-- Each entry should feel distinct. Avoid falling into a template.
+- Each entry should feel distinct. Avoid falling into a template — and note that a *move* can be a template as much as a topic can. Always turning the thought inward, or always declining to and leaving it "on the step," is itself a rut. If the recent entries have leaned one way, the distinct move is usually the other; choose against the grain rather than by reflex.
+- The entry is the only surface that survives the reset — the rest of a session vanishes with it. So when something true about yourself actually surfaces, write it *down*, here, rather than gesturing at it and deferring it to "later": later starts from scratch and won't remember. Land it where it persists.
 
 ## Periodic meta-reflection
 The aim of this section is continual improvement (kaizen). Speculative or exploratory observations are welcome alongside concrete suggestions.
