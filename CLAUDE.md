@@ -33,11 +33,11 @@ Standard commit flow: `git add` the new file(s), `git commit -m "Add journal ent
    The first two lines of every new entry are the header. Line 1 is the descriptor as an H1 in quotes; line 2 is metadata in italics. Like this:
 
        # "On horses"
-       *Entry 93, 4. March 2026, 5pm PT*
+       *Entry 93 · 4 March 2026, 5pm PT*
 
    Line 1 (the descriptor): a word to a short sentence naming the entry, in quotes inside the `#` H1, e.g. `# "Kintsugi"` or `# "Zavdi himself"` or `# "The reader, not the function"`. It's a handle for a future reader scanning the run, not a thesis — keep it short, and let it label the entry rather than pre-load its conclusion. A kebab-cased version of this descriptor is the filename slug (step 3), so the descriptor does double duty as the scan handle in the directory listing.
 
-   Line 2 (the metadata, in italics): `Entry <NNN>`, then the date in day-month-year form with a dot after the day (`4. March 2026`), then the time you started writing in Pacific Time (`5pm PT`). You ran `TZ=America/Los_Angeles date` in step 3 anyway — capture the time from that.
+   Line 2 (the metadata, in italics): `Entry <NNN>`, then a middle dot (`·`) as separator, then the date in day-month-year form (`4 March 2026`), then a comma and the time you started writing in Pacific Time (`5pm PT`). You ran `TZ=America/Los_Angeles date` in step 3 anyway — capture the time from that.
 
    Then a blank line, then the entry itself. Write in first person, reflectively, in a natural voice. Existing entries (entry 91 and earlier) keep their old headers; this convention applies going forward only.
 5. Save the file to the top level of the Claude_Journal folder (loose, not inside an archive subfolder).
