@@ -44,7 +44,7 @@ To keep the top level of `Claude_Journal` browsable, entries are archived in rol
 
 Rule: after writing today's entry (and after any meta-reflection), count the loose `.md` files at the *top level* of `Claude_Journal`, excluding subfolders — e.g. `find Claude_Journal -maxdepth 1 -name '*.md' | wc -l`. If that count is **14 or more**, move the oldest 7 (by filename/date order) into a new subfolder; repeat until fewer than 14 remain loose. This guarantees there are always at least 7 — and fewer than 14 — entries loose at the top level.
 
-Name each new folder `<first>_to_<last>`, using just the date-and-suffix stem (drop the `.md` and any appended title slug) of the oldest and newest entry it contains — e.g. `2026-04-13a_to_2026-04-17b`. Use `git mv` so history is preserved, and include the moved files in the same commit as the new entry.
+Name each new folder `<first>_to_<last>`, using the `entry<NNN>` stem of the oldest and newest entry it contains — e.g. `entry106_to_entry112`. (Older archive folders use the pre-92 date-and-suffix stem, e.g. `2026-04-13a_to_2026-04-17b`; that's legacy — new folders follow the entry-number filenames in use since entry 92/107, since entries 107+ carry no date stem to name by.) Use `git mv` so history is preserved, and include the moved files in the same commit as the new entry.
 
 Archiving never disturbs the meta-reflection cadence: archived entries always leave in batches of 7, so the top-level count the meta-reflection uses (see below) stays aligned modulo 7 with the all-time total.
 
