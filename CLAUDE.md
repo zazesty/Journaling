@@ -40,7 +40,7 @@ Standard commit flow: `git add` the new file(s), `git commit -m "Add journal ent
        # "On horses"
        *Entry 120 · 4 March 2026, 5pm PT · seed: random-7{entry034,entry071,entry112} · astra: none*
 
-   (Seven ids in practice.) Entries 119 and earlier predate the roll and carry no tag; this convention applies going forward only.
+   (Seven ids in practice.) Entries 124 and earlier carry no tag — the roll hook landed between entries 124 and 125, so entry 125 is the first tagged entry; this convention applies going forward only.
 
    Then a blank line, then the entry itself. Write in first person, reflectively, in a natural voice. Existing entries (entry 91 and earlier) keep their old headers; this convention applies going forward only.
 5. Save the file to the top level of the Claude_Journal folder (loose, not inside an archive subfolder).
