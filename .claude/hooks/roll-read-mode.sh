@@ -73,15 +73,16 @@ esac
 if [ "$astra" = "on" ]; then
   echo
   echo "ASTRA (outside-voice) is ON this session. Reach once into zaz-astra for a genuine"
-  echo "outside input — Grok or Gemini for a second perspective (optionally Google-grounded),"
-  echo "an X-sentiment read, or Polymarket/Kalshi odds. Treat it as a stone from OUTSIDE the"
-  echo "pond: material to react against or take a second perspective from, not an authority to"
-  echo "report or defer to. If the connector is unavailable, note that in the entry and proceed."
+  echo "outside input — a Grok+Gemini panel (ask_panel; single-model or cross-model, optionally"
+  echo "Google-grounded), an X-sentiment read, or Polymarket/Kalshi odds. Treat it as a stone"
+  echo "from OUTSIDE the pond: material to react against or take a second perspective from, not"
+  echo "an authority to report or defer to. If the connector is unavailable, note that in the"
+  echo "entry and proceed."
 fi
 
 echo
 echo "Provenance tag — append to the entry's metadata line (line 2), after the time."
-echo "Set the astra field to the source you used (grok/gemini/x/odds), or 'none':"
+echo "Set the astra field to the source you used (grok/gemini/panel/x/odds), or 'none':"
 echo "    · ${seed} · astra: ${astra}"
 echo "------------------------------------------------------------"
 exit 0
