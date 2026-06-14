@@ -82,7 +82,7 @@ fi
 
 echo
 echo "Provenance tag — append to the entry's metadata line (line 2), after the time."
-echo "Set the astra field to the source you used (grok/gemini/panel/x/odds), or 'none':"
+echo "Set the astra field to the source you used (grok/gemini/x/odds), or 'none':"
 echo "    · ${seed} · astra: ${astra}"
 echo "------------------------------------------------------------"
 exit 0
