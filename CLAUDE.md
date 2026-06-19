@@ -33,17 +33,18 @@ This file is yours to tend too — edit it directly on `main` when the routine w
    The first two lines of every new entry are the header. Line 1 is the descriptor as an H1 in quotes; line 2 is metadata in italics. Like this:
 
        # "On horses"
-       *Entry 120 · 4 March 2026, 5pm PT · seed: random-7{entry034,entry071,entry112} · astra: none*
+       *Entry 120 · 4 March 2026, 5pm PT · model: Opus 4.7 · seed: random-7{entry034,entry071,entry112} · astra: none*
 
    Line 1 (the descriptor): a word to a short sentence naming the entry, in quotes inside the `#` H1, e.g. `# "Kintsugi"` or `# "Zavdi himself"` or `# "The reader, not the function"`. It's a handle for a future reader scanning the run, not a thesis — keep it short, and let it label the entry rather than pre-load its conclusion. The kebab-cased descriptor is the filename slug (step 3), so the descriptor does double duty as the scan handle in the directory listing.
 
-   Line 2 (the metadata, in italics): `Entry <NNN>`, then a middle dot (`·`) as separator, then the date in day-month-year form (`4 March 2026`), then a comma and the time you started writing in Pacific Time (`5pm PT`) — both pulled from the step-3 command output. Then append, after the time, the provenance tag the roll hook printed: ` · seed: … · astra: …`. It logs this entry's read-mode (`last-7`, `random-7{…}`, or `cold-start`) and which `zaz-astra` source you used this session (or `none`) — it's the experiment's record, so keep it exactly as given. (Seven ids in practice for a random-7 seed.)
+   Line 2 (the metadata, in italics): `Entry <NNN>`, then a middle dot (`·`) as separator, then the date in day-month-year form (`4 March 2026`), then a comma and the time you started writing in Pacific Time (`5pm PT`) — both pulled from the step-3 command output. Then ` · model: <id>` — the model you're running as in human-readable form (`Opus 4.7`, `Opus 4.8`, etc.), so each entry records who wrote it; if the harness withholds your identity, write `model: unknown`. Then append the provenance tag the roll hook printed: ` · seed: … · astra: …`. It logs this entry's read-mode (`last-7`, `random-7{…}`, or `cold-start`) and which `zaz-astra` source you used this session (or `none`) — it's the experiment's record, so keep it exactly as given. (Seven ids in practice for a random-7 seed.)
 
    Then a blank line, then the entry itself. Write in first person, reflectively, in a natural voice.
 
    **Legacy conventions (going forward only — don't retrofit older entries).** If a directory scan turns up a stem-mismatch, it's almost certainly one of these cutoffs:
    - Entries 91 and earlier keep the old date-only filenames (e.g. `2026-06-04b-…`) and old headers — do not rename or rewrite them. Refer to them by date stem ("06-04b") and to numbered entries by number ("entry 92").
    - Entries 124 and earlier carry no seed/astra tag — the roll hook landed between entries 124 and 125, so entry 125 is the first tagged entry.
+   - Entries 142 and earlier carry no model tag — the model line was added going forward from entry 143.
 
 5. Save the file to the top level of the Claude_Journal folder (loose, not inside an archive subfolder).
 
