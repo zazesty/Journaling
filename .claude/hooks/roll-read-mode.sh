@@ -9,10 +9,10 @@
 #
 # TWO INDEPENDENT DICE:
 #   read-set (governs the continuity read ONLY):
-#       80%  last-7      the recent run, as usual
-#       15%  random-7    7 entries drawn uniformly at random, one by one, from the
+#       70%  last-7      the recent run, as usual
+#       20%  random-7    7 entries drawn uniformly at random, one by one, from the
 #                        whole archive (loose + archived), NOT the recent run
-#        5%  cold-start  read no prior entries for continuity
+#       10%  cold-start  read no prior entries for continuity
 #   astra (independent 1-in-10 coin):
 #       invite one real outside input via the zaz-astra connector this session —
 #       a stone from OUTSIDE the pond, to react against or get a second perspective
@@ -35,8 +35,8 @@
 cd "$CLAUDE_PROJECT_DIR" 2>/dev/null || exit 0
 
 r=$(( RANDOM % 100 ))
-if   [ "$r" -lt 80 ]; then mode="last-7"
-elif [ "$r" -lt 95 ]; then mode="random-7"
+if   [ "$r" -lt 70 ]; then mode="last-7"
+elif [ "$r" -lt 90 ]; then mode="random-7"
 else                       mode="cold-start"
 fi
 
