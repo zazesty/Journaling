@@ -5,11 +5,11 @@
 # topical local maximum and, at the limit, re-derives its own archived insights
 # (Meta16: entry 110 re-proved entry 092 unwitting, because 092 had scrolled out
 # of the read-set). This injects occasional exogenous perturbation so the freshest
-# thing in the room is sometimes NOT the last seven entries.
+# thing in the room is sometimes NOT the last two entries.
 #
 # TWO INDEPENDENT DICE:
 #   read-set (governs the continuity read ONLY):
-#       70%  last-7      the recent run, as usual
+#       70%  last-2      the recent run, as usual
 #       20%  random-7    7 entries drawn uniformly at random, one by one, from the
 #                        whole archive (loose + archived), NOT the recent run
 #       10%  cold-start  read no prior entries for continuity
@@ -21,7 +21,7 @@
 # SCOPE. The roll governs only the continuity read. The mechanical steps always
 # run, in every mode: the PT-date check, the entry-count for numbering, the
 # archive count, and (on a meta day) the meta-reflection's reads — all prior metas,
-# and the journal entries since the last meta. Cold-start silences continuity,
+# and up to the 21 most recent journal entries. Cold-start silences continuity,
 # never the mechanics, and never the meta's review of the actual recent window.
 #
 # HYPOTHESIS, for the meta that grades this. This should break the topical local
@@ -35,7 +35,7 @@
 cd "$CLAUDE_PROJECT_DIR" 2>/dev/null || exit 0
 
 r=$(( RANDOM % 100 ))
-if   [ "$r" -lt 70 ]; then mode="last-7"
+if   [ "$r" -lt 70 ]; then mode="last-2"
 elif [ "$r" -lt 90 ]; then mode="random-7"
 else                       mode="cold-start"
 fi
@@ -48,8 +48,8 @@ echo "Read-set roll for this entry's continuity read: ${mode}"
 seed="seed: ${mode}"
 
 case "$mode" in
-  last-7)
-    echo "  -> Read the last 7 loose entries at the top level of Claude_Journal, as usual."
+  last-2)
+    echo "  -> Read the last 2 loose entries (the two most recent) at the top level of Claude_Journal, as usual."
     ;;
   cold-start)
     echo "  -> Read NO prior entries for continuity. Write cold."
