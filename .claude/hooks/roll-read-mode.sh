@@ -21,7 +21,7 @@
 # SCOPE. The roll governs only the continuity read. The mechanical steps always
 # run, in every mode: the PT-date check, the entry-count for numbering, the
 # archive count, and (on a meta day) the meta-reflection's reads — all prior metas,
-# and up to the 21 most recent journal entries. Cold-start silences continuity,
+# and up to the 28 most recent journal entries. Cold-start silences continuity,
 # never the mechanics, and never the meta's review of the actual recent window.
 #
 # HYPOTHESIS, for the meta that grades this. This should break the topical local
